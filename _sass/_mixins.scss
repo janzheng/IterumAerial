@@ -131,4 +131,18 @@
   } 
 }
 
+@mixin slope($deg) {
+  // -webkit-transform: rotate($deg);
+  // -moz-transform: rotate($deg);
+  // -o-transform: rotate($deg);
+  // -ms-transform: rotate($deg);
+  // transform: rotate($deg);
+  @include transform(rotate($deg));
+  transform-origin: left center;
+
+  .slope-content {
+    @include transform(rotate($deg * -1))
+  }
+}
+
 

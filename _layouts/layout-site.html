@@ -2,6 +2,7 @@
 {% assign url = page.url|remove:'index.html' %}
 {% assign navlist = site.navigation %}
 
+<!-- Site designed and maintained by www.janzheng.com -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -9,165 +10,136 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{ page.title }}</title>
-  <meta name="description" content="Jan designs and prototypes experiences.">
-  <meta name="author" content="Jan Zheng">
-  <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
+  <meta name="description" content="Shannon Stanley aerial & dance">
+  <meta name="author" content="Shannon Stanley">
+  <meta name="keywords" content="dance, aerial, ballet, silks, sling, fabric, circus, performance">
   
   <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1" />
-
+<!-- 
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600, 700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
 
   <link rel="stylesheet" href="/app/css/royalslider.css" > 
   <link rel="stylesheet" href="/app/css/minimal-white/rs-minimal-white.css" >
 
   <script src="/app/js/jquery.min.js"></script>
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/iterum.png">
 
   <!-- import gets all the styles from main.scss in the _scss folder -->
   <link rel="stylesheet" href="/app/css/import.css">
 
 </head>
 
-<body id="skrollr-body">  
-  <div class="color-palette color-top" id="top">
-    <div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div><div id="c5"></div>
-    <div id="a1"></div><div id="a2"></div><div id="a3"></div><div id="a4"></div><div id="a5"></div>
-  </div>
+<body id="skrollr-body">
+  <div class="wrapper">
 
 
-  <!-- Navigation -->
-  <!-- Main navigation
-        - stays to the left side >480. Static at the top <480. Mobile nav kicks in with a scroll top.
-   -->
-  <div class="nav">
+    <!-- Navigation -->
+    <!-- Main navigation
+          - stays to the left side >480. Static at the top <480. Mobile nav kicks in with a scroll top.
+     -->
+    <!-- 
+    <div class="nav">
 
-    <!-- JZ logo -->
-    <div class="nav__logo clearfix">
-      <a class="nav__logo__link" href="/">
-        <div class="nav__logo__content ">
-          <span class="nav__j">jan </span><span class="nav__z">zheng</span>
+      <div class="nav__menu">
+        <div class="nav__menu__content">
+
+        {% for item in navlist %}
+        
+          {% if item.text == 'thoughts' || item.text == 'rants' %}
+          <a href="{{item.url}}">
+            <div class="nav__item nav__blog 
+                        {% if url == item.url' %} active{% endif %}
+                        {% if page.type == 'blog' %} active{% endif %}" >
+              <div class="nav__label">{{item.text}}</div>
+            </div>
+          </a>
+          {% endif %}
+
+          {% if item.text == 'about' %}
+          {% assign _url = url | append: '.html' %}
+          <a href="{{item.url}}">
+            <div class="nav__item nav__about {% if _url == item.url %}active{% endif %}" >
+              <div class="nav__label">{{item.text}} </div>
+            </div>
+          </a>
+          {% endif %}
+
+          {% if item.text == 'bookmarks' %}
+          {% assign _url = url | append: '.html' %}
+          <a href="{{item.url}}" >
+            <div class="nav__item nav__bookmarks {% if _url == item.url %}active{% endif %}" >
+              <div class="nav__label">{{item.text}}</div>
+            </div>
+          </a>
+          {% endif %}
+
+
+        {% endfor %}
+
+
         </div>
-      </a>
-    </div>
-
-    <!-- Main navigation buttons -->
-    <div class="nav__menu">
-      <div class="nav__menu__content">
-
-      <!-- generate links and mark nav as active -->
-      {% for item in navlist %}
-      
-        {% if item.text == 'thoughts' || item.text == 'rants' %}
-        <a href="{{item.url}}">
-          <div class="nav__item nav__blog 
-                      {% if url == item.url' %} active{% endif %}
-                      {% if page.type == 'blog' %} active{% endif %}" >
-            <!-- <span class="icon icon--blog"></span> -->
-            <div class="nav__label">{{item.text}}</div>
-          </div>
-        </a>
-        {% endif %}
-
-        {% if item.text == 'about' %}
-        {% assign _url = url | append: '.html' %}
-        <a href="{{item.url}}">
-          <div class="nav__item nav__about {% if _url == item.url %}active{% endif %}" >
-            <!-- <span class="icon icon--about"></span> -->
-            <div class="nav__label">{{item.text}} </div>
-          </div>
-        </a>
-        {% endif %}
-
-        {% if item.text == 'bookmarks' %}
-        {% assign _url = url | append: '.html' %}
-        <a href="{{item.url}}" >
-          <div class="nav__item nav__bookmarks {% if _url == item.url %}active{% endif %}" >
-            <!-- <span class="icon icon--tools"></span> -->
-            <div class="nav__label">{{item.text}}</div>
-          </div>
-        </a>
-        {% endif %}
-
-
-      {% endfor %}
-
-
       </div>
+      
+
+      <div class="nav__social">
+        <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
+          <div class="nav__social__item nav__social__email ">
+            <div class="nav__social__label">email</div>
+          </div>
+        </a>
+
+        <a href="https://twitter.com/janistanian">
+          <div class="nav__social__item nav__social__twitter">
+            <div class="nav__social__label">tweet</div>
+          </div>
+        </a>
+
+
+        <a href="http://www.linkedin.com/in/janzh">
+          <div class="nav__social__item nav__social__linkedin">
+            <div class="nav__social__label">link</div>
+          </div>
+        </a>
+
+        <a target="_blank" href="/resume.pdf">
+          <div class="nav__social__item nav__social__resume">
+            <div class="nav__social__label">résumé</div>
+          </div>
+        </a>
+      </div>
+
     </div>
 
-
-    
-
-    <!-- Social icons / contact (email, twitter, linkedin) -->
-    <div class="nav__social">
-      <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
-        <div class="nav__social__item nav__social__email ">
-          <!-- <span class="icon icon--small icon--email"></span> -->
-          <div class="nav__social__label">email</div>
-        </div>
-      </a>
-
-      <a href="https://twitter.com/janistanian">
-        <div class="nav__social__item nav__social__twitter">
-          <!-- <span class="icon icon--small icon--twitter"></span> -->
-          <div class="nav__social__label">tweet</div>
-        </div>
-      </a>
+   -->
 
 
-      <a href="http://www.linkedin.com/in/janzh">
-        <div class="nav__social__item nav__social__linkedin">
-          <!-- <span class="icon icon--small icon--linkedin"></span> -->
-          <div class="nav__social__label">link</div>
-        </div>
-      </a>
+    <div class="clear"></div>
 
-      <a target="_blank" href="/resume.pdf">
-        <div class="nav__social__item nav__social__resume">
-          <!-- <span class="icon icon--small icon--resume"></span> -->
-          <div class="nav__social__label">résumé</div>
-        </div>
-      </a>
+    <!-- <div class="main__container container"> -->
+
+    <div class="">
+
+      <!-- Main section for content -->
+      <!-- <div class="main"> -->
+      <div class="main__body">
+        {{ content }}
+      </div>
+
+      <!-- </div> -->
+
     </div>
-
+    <!-- End container -->
   </div>
-  <!-- End sidebar navigation -->
+  <!-- end wrapper -->
 
 
-  <div class="clear"></div>
-
-  <div class="main__container container">
-
-    <!-- Main section for content -->
-    <!-- <div class="main"> -->
-    <div class="main__body">
-      {{ content }}
-    </div>
-<!-- 
-    <div class="main__tumblr">
-      <p>Latest from <a href="http://YOURBLOG.tumblr.com/">our Tumblr blog</a>...</p>
-      <h2 id="blog-headline"></h2>
-      <div id="blog-body"></div>
-      <ul id="blog-more">
-      </ul>
-    </div>
- -->
-    <div class="main__footer">
-        &copy; 2016 – Built on <a href="https://github.com/mojombo/jekyll">Jekyll</a>. Get the template <a href="https://github.com/janzheng/janzheng.github.com">on Github</a>
-    </div> 
-    <!-- </div> -->
-
-  </div>
-  <!-- End container -->
-
-
-
-
-
-
+  <div class="main__footer">
+      &copy; 2016 – Iterum Aerial // Shannon Stanley
+  </div> 
 
 
 
@@ -179,19 +151,13 @@
 
 
 <!-- 
-  <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"></script>
- -->
-  <!-- Google Prettify - https://code.google.com/p/google-code-prettify/wiki/GettingStarted 
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&lang=html&lang=js&skin=desert"></script>
-  -->
-
   <script src="/app/js/waypoints.min.js"></script>
   <script src="/app/js/skrollr.min.js"></script>
 
   <script src="/app/js/list.min.js"></script>
   <script src="/app/js/jquery.fluidbox.min.js"></script>
   <script src="/app/js/jquery.royalslider.min.js"></script>
-  
+   -->
   <script src="/app/js/script.js"></script>
   
 
