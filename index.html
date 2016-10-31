@@ -50,8 +50,10 @@ featured : false
       <div class="slope-container">
         <div class="slope-negThree" id="home-hero-image">
           <div class="slope-content">
-            <div class="slope-content-hero">
-            </div>
+            <a href="#home-main">
+              <div class="slope-content-hero" id="slope-content-hero">
+              </div>
+            </a>
             <div class="home-logo">
               <img src="app/images/iterum_full.png" />
             </div>
@@ -62,7 +64,7 @@ featured : false
 
   </div>
 
-  <div class="home-main">
+  <div class="home-main" id="home-main">
     <div class="container">
         <div class="home-statement">
           I perform and teach circus and dance with a passion. 
@@ -127,19 +129,19 @@ featured : false
 </div>
 <!-- end posts list -->
 
-<!-- 
+
 <script>
   function hero_position() {
       var height = $(window).height();
       var thirtypc = (30 * height) / 100;
       thirtypc = parseInt(thirtypc) + 'px';
-      $("#page-hero-image").css('height', $(window).height());
+      $("#slope-content-hero").css('height', $(window).height());
   }
 
   $(document).ready(function() {
       hero_position();
       $(window).bind('resize', hero_position);
   });
-</script> -->
+</script>
 
 

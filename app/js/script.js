@@ -152,28 +152,28 @@
 
 //   // Math.floor((Math.random()*10));
 
-//   // ************************************************************
-//   // Smooth Scrolling 
-//   // - can link to a # of another page, and smooth-scroll down to that #
+  // ************************************************************
+  // Smooth Scrolling 
+  // - can link to a # of another page, and smooth-scroll down to that #
 
-//     var scrollElement = 'html, body';
+    var scrollElement = 'html, body';
     
-//     // Smooth scrolling for internal links
-//     $("a[href^='#']").click(function(event) {
-//       event.preventDefault();
+    // Smooth scrolling for internal links
+    $("a[href^='#']").click(function(event) {
+      event.preventDefault();
       
-//       var $this = $(this),
-//       target = this.hash,
-//       $target = $(target);
+      var $this = $(this),
+      target = this.hash,
+      $target = $(target);
       
-//       if( !(typeof $target.offset() === "undefined")) {
-//         $(scrollElement).stop().animate({
-//           'scrollTop': $target.offset().top
-//         }, 500, 'swing', function() {
-//           window.location.hash = target;
-//         });
-//       }
-//     });
+      if( !(typeof $target.offset() === "undefined")) {
+        $(scrollElement).stop().animate({
+          'scrollTop': $target.offset().top
+        }, 500, 'swing', function() {
+          window.location.hash = target;
+        });
+      }
+    });
 
 
 
