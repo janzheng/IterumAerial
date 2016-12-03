@@ -9,3 +9,7 @@ todo
 ------
 
 analytics
+animations
+design around copy, fake copy / get more info
+– get them to do a better video, give them video direction
+

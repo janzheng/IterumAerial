@@ -21,8 +21,8 @@
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
   <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
 
-  <link rel="stylesheet" href="/app/css/royalslider.css" > 
-  <link rel="stylesheet" href="/app/css/minimal-white/rs-minimal-white.css" >
+  <!-- <link rel="stylesheet" href="/app/css/royalslider.css" >  -->
+  <!-- <link rel="stylesheet" href="/app/css/minimal-white/rs-minimal-white.css" > -->
 
   <script src="/app/js/jquery.min.js"></script>
 
@@ -30,123 +30,26 @@
 
   <!-- import gets all the styles from main.scss in the _scss folder -->
   <link rel="stylesheet" href="/app/css/import.css">
+  <link rel="stylesheet" href="/app/css/fluidbox.min.css">
 
 </head>
 
 <body id="skrollr-body">
+
+
+
   <div class="wrapper">
-
-
-    <!-- Navigation -->
-    <!-- Main navigation
-          - stays to the left side >480. Static at the top <480. Mobile nav kicks in with a scroll top.
-     -->
-    <!-- 
-    <div class="nav">
-
-      <div class="nav__menu">
-        <div class="nav__menu__content">
-
-        {% for item in navlist %}
-        
-          {% if item.text == 'thoughts' || item.text == 'rants' %}
-          <a href="{{item.url}}">
-            <div class="nav__item nav__blog 
-                        {% if url == item.url' %} active{% endif %}
-                        {% if page.type == 'blog' %} active{% endif %}" >
-              <div class="nav__label">{{item.text}}</div>
-            </div>
-          </a>
-          {% endif %}
-
-          {% if item.text == 'about' %}
-          {% assign _url = url | append: '.html' %}
-          <a href="{{item.url}}">
-            <div class="nav__item nav__about {% if _url == item.url %}active{% endif %}" >
-              <div class="nav__label">{{item.text}} </div>
-            </div>
-          </a>
-          {% endif %}
-
-          {% if item.text == 'bookmarks' %}
-          {% assign _url = url | append: '.html' %}
-          <a href="{{item.url}}" >
-            <div class="nav__item nav__bookmarks {% if _url == item.url %}active{% endif %}" >
-              <div class="nav__label">{{item.text}}</div>
-            </div>
-          </a>
-          {% endif %}
-
-
-        {% endfor %}
-
-
-        </div>
-      </div>
-      
-
-      <div class="nav__social">
-        <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
-          <div class="nav__social__item nav__social__email ">
-            <div class="nav__social__label">email</div>
-          </div>
-        </a>
-
-        <a href="https://twitter.com/janistanian">
-          <div class="nav__social__item nav__social__twitter">
-            <div class="nav__social__label">tweet</div>
-          </div>
-        </a>
-
-
-        <a href="http://www.linkedin.com/in/janzh">
-          <div class="nav__social__item nav__social__linkedin">
-            <div class="nav__social__label">link</div>
-          </div>
-        </a>
-
-        <a target="_blank" href="/resume.pdf">
-          <div class="nav__social__item nav__social__resume">
-            <div class="nav__social__label">résumé</div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-
-   -->
-
-
     <div class="clear"></div>
-
-    <!-- <div class="main__container container"> -->
-
-    <div class="">
-
-      <!-- Main section for content -->
-      <!-- <div class="main"> -->
       <div class="main__body">
         {{ content }}
       </div>
-
-      <!-- </div> -->
-
     </div>
-    <!-- End container -->
   </div>
-  <!-- end wrapper -->
 
 
   <div class="main__footer">
-      &copy; 2016 – Iterum Aerial // Shannon Stanley
+      &copy; 2016 &mdash; Iterum Aerial
   </div> 
-
-
-
-
-
-
-
 
 
 
@@ -158,8 +61,12 @@
   <script src="/app/js/jquery.fluidbox.min.js"></script>
   <script src="/app/js/jquery.royalslider.min.js"></script>
    -->
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="/app/js/jquery.fluidbox.min.js"></script>
+
+  <script src="/app/js/skrollr.min.js"></script>
   <script src="/app/js/script.js"></script>
-  
 
 
 
@@ -170,7 +77,7 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-39843414-1', 'janzheng.com');
+    ga('create', 'UA-87926468-1', 'iterumaerial.com');
     ga('send', 'pageview');
 
   </script>

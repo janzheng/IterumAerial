@@ -1,0 +1,91 @@
+
+// slope mechanism
+
+$slope_left: -10%;
+.slope-wrapper {
+  overflow: hidden;
+  // background: $color-black;
+  width: 100%;
+}
+.slope-container {
+  display: block;
+  overflow: hidden;
+
+  // width: 150%;
+  // left: $slope_left;
+  position: relative;
+}
+  .slope-content {
+    margin: 0 auto;
+    position: relative;
+    // left: $slope_left * -1;
+    padding-top: $base;
+    padding-bottom: 0;
+    // padding-bottom: $base *2;
+    // text-align: center;
+  }
+    // retains the slope at top and bottom
+    .slope-frame-container {
+      overflow: hidden;
+      // padding-top: 100px;
+      padding-top: $base*2;
+      padding-bottom: 100px;
+      margin-left: $base * 5;
+      margin-right: $base * 5;
+    }
+    .slope-frame {
+      margin-top: -100px;
+      margin-bottom: -100px;
+      overflow: hidden;
+      position: relative;
+    }
+  .slope-negThree {
+    @include slope(-1.5deg);
+    // height: 600px;
+    // background: green;
+    margin-left: -50px;
+    margin-right: -50px;
+    overflow: hidden;
+    padding-bottom: 60px;
+
+    @include _showMediumWidth {
+      margin-left: -30px;
+      margin-right: -30px;
+    }
+  }
+    .slope-negThreeInverse {
+      @include slopeNeg(-1.5deg);
+      // height: 600px;
+      // background: green;
+      margin-left: -50px;
+      margin-right: -50px;
+      overflow: hidden;
+      // padding-bottom: 60px;
+    }
+    .slope-negThreeOpposite {
+      @include slope(1.5deg);
+      // height: 600px;
+      // background: green;
+      margin-left: -50px;
+      margin-right: -50px;
+      overflow: hidden;
+      padding-bottom: 60px;
+    }
+  .slope-negSix {
+    @include slope(-2.5deg);
+    // height: 600px;
+    // background: green;
+    margin-left: -50px;
+    margin-right: -50px;
+    overflow: hidden;
+    padding-bottom: 60px;
+  }
+    .slope-negSixOpposite {
+      @include slope(2.5deg);
+      // height: 600px;
+      // background: green;
+      margin-left: -50px;
+      margin-right: -50px;
+      overflow: hidden;
+      // padding-bottom: 60px;
+    }

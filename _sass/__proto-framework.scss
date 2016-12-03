@@ -155,12 +155,12 @@ $width-nav-menu: 180px;
     background: rgba($color, $opacity);
 }
 
-@mixin ease($speed){
-    -webkit-transition: all $speed ease;
-    -moz-transition: all $speed ease;
-    -ms-transition: all $speed ease;
-    -o-transition: all $speed ease;
-    transition: all $speed ease;
+@mixin ease($speed, $elem:all ){
+    -webkit-transition: $elem $speed ease;
+    -moz-transition: $elem $speed ease;
+    -ms-transition: $elem $speed ease;
+    -o-transition: $elem $speed ease;
+    transition: $elem $speed ease;
 }
 
 @mixin ease-out($speed){

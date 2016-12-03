@@ -1,43 +1,5 @@
 
 
-// *********************************************************
-// WIREFRAME STYLES + DESIGN
-// - this file specifies variables and design components
-// - don't directly affect IDs and classes from this file
-// *********************************************************
-
-
-
-// *********************************************************
-// DESIGN MIXINS
-// *********************************************************
-
-
-// @mixin placeholder-style($selector){
-//     $selector::-webkit-input-placeholder { /* WebKit browsers */
-//         @content;
-//     }
-//     $selector::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-//         @content;
-//     }
-//     $selector::-moz-placeholder { /* Mozilla Firefox 19+ */
-//         @content;
-//     }
-//     $selector::-ms-input-placeholder { /* Internet Explorer 10+ */
-//         @content;
-//     }
-// }
-
-
-
-// *********************************************************
-// VARIABLES
-// *********************************************************
-
-// basic sizes
-$base: 1rem;
-$margin: $base;
-
 
 // color
 
@@ -51,14 +13,15 @@ $red: #972020;
    // $darker-red: #660200;
    $matte-red:#C5252B;
 
-$black: #000000;
+$black: #010101;
    $deep-gray: #0f0f0f;
    $dark-gray: #333333;
    $slate: #3e3e3e;
    $medium-gray: #555555;
    $gray: #777777;
    $lighter-gray: #aaa;
-   $light-gray: #cccccc;
+   $light-gray: #ddd;
+   $dark-silver: #e4e4e4;
    $silver: #f2f2f2;
    $silvercloud: #f9f9f9;
    $silverline: #f8f8f8;
@@ -88,10 +51,6 @@ $blue: #275d84;
   $sky-blue: #68C6EE;
   $deep-blue: #123456;
 
-$purple: #5c2849;
-
-// $orange: $color2-5;
-$teal: #01A7A4;
 
 
 // 
@@ -138,17 +97,30 @@ $color0: $life5;
 
 
 
-
 // iterum colors
+$color-teal: #0096A9;
+$color-purple: #8431A6;
 
-%background {
-  background-color: $silversky;
-}
 
-$color-base: $medium-gray;
+$color-text: #1f1f1f;
+$color-base: $color-text;
 $color-black: $deep-gray;
+$color-pureblack: $black;
+$color-bg: $color-pureblack;
+$color-contentbg: $silversky;
 $color-base-white: $silver;
 
 
+
+
+%background {
+  background-color: $color-contentbg;
+}
+
+._backgroundSilver {
+  &, h1, h2, h3, h4, h5, h6 {
+    background-color: $silver;
+  }
+}
 
 

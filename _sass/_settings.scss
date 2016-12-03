@@ -5,6 +5,21 @@
 // *********************************************************
 
     
+// custom media query and breakpoint that fits the site
+// used as mixins
+
+@mixin _showMediumWidth(){
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin _showSmallWidth(){
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
 
 // *********************************************************
 // UNIVERSAL
@@ -26,23 +41,9 @@
   font-style: normal;
 }
 
-
-
 // Fonts
 %sans-serif {font-family: "Open Sans", "Helvetica Neue", arial, sans-serif;}
-// %body-font {@extend %sans-serif; font-weight: 300;}
-%helvetica {font-family: "Helvetica Neue", "Open Sans", sans-serif;}
-// %serif {font-family: 'Libre Baskerville', Georgia, serif;}
-
-// @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,300,200,100,600,700,800,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:100,);
-
 %serif {font-family: 'Merriweather', Georgia, serif;}
-// %serif {font-family: Georgia, serif;}
-
-// %josefin {font-family: 'Josefin Sans', serif;}
-// %display {font-family: Raleway, "Open Sans", "Helvetica Neue", 'Helvetica', arial, sans-serif !important; }
-// %display {font-family: 'Josefin Sans', "Open Sans", "Helvetica Neue", 'Helvetica', arial, sans-serif !important; }
 %display { font-family: 'Lavanderia', 'Merriweather', Georgia, serif; }
 
 %no-float {
@@ -115,6 +116,9 @@ $s1: golden-ratio(14px,  1);
 .margin-top {
   margin-top: $base;
 }
+  .margin-top-two {
+    margin-top: $base*2;
+  }
 
 .margin-bottom {
   margin-bottom: $base;
@@ -128,22 +132,69 @@ strong {
 
 h1, %h1 {
   @extend %serif;
-  font-size: $base*2;
-  line-height: $base*4;
-  font-weight: 300;
+  // font-size: $base*2;
+  // line-height: $base*4;
+  // font-weight: 300;
   padding-top: $base*4;
   padding-bottom: $base*2;
+
+  font-weight: 600;
+  font-size: $base*2.2;
+  line-height: $base*5.7;
+  color: $color-black;
 }
 
 h2, %h2 {
+  @extend %sans-serif;
+  font-size: $base*2.3;
+  line-height: $base*2.4;
+  font-weight: 300;
+  // letter-spacing: 0.5px;
+  color: $dark-gray;
+  padding-bottom: $base*1.15;
+}
+
+h3, %h3 {
   @extend %serif;
-  font-size: $base*1.5;
-  line-height: $base*2.5;
+  font-size: $base*1.8;
+  line-height: $base*3.5;
   font-weight: 300;
   letter-spacing: 0.5px;
   color: $dark-gray;
   padding-bottom: $base;
 }
+
+h2 + h4 {
+  margin-top: -8px;
+}
+
+h4, %h4 {
+  @extend %serif;
+  font-size: $base*1;
+  line-height: $base*2.4;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: $dark-gray;
+  padding-bottom: $base;
+}
+
+h5 {
+  @extend %sans-serif;
+  font-size: $base*0.7;
+  line-height: $base*1.6;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  padding-bottom: $base*0.6;
+}
+
+p, %text {
+  color: $color-text;
+  font-size: 18px;
+}
+
+// z-order
+
+$z-top: 9999;
 
 
 

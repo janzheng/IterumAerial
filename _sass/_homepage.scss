@@ -1,421 +1,366 @@
 
 
-// hero
+// INTRO BLOCK
 
-.home-hero {
+.intro {
+  position: fixed;
+  width: 100%;
+  z-index: $z-top;
+  opacity: 1;
+  height: 100%;
+  @include ease(130ms, height opacity);
 
-  position: relative;
-  z-index: 100;
-
-  .slope-container {
-    background-color: transparent;
+  &._fade {
+    opacity: 0;
+    height: 0;
+    @include ease(130ms, height opacity);
   }
 
-  .slope-content {
-    padding-top: 0;
+  #intro-block {
+    display: block;
   }
 
-  .slope-negThree {
-    background-color: black;
-    // height: 94vh;
+  .home-hero {
+
+    position: relative;
+    z-index: 100;
+
+    .slope-container {
+      // background-color: $silversky;
+      // use as the bottom of a menu bg container
+    }
+
+    .slope-content {
+      padding-top: 0;
+    }
+
+    .slope-negThree {
+      background-color: $color-pureblack;
+      // height: 94vh;
+    }
+
+    .intro-hero-container {
+      // position: relative;
+      position: fixed;
+      width: 100%;
+    }
+
+    .intro-hero {
+      background: url('../../app/images/hero.jpg');
+      // height: 100%;
+      height: 600px;
+      width: 800px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: calc(50%)  0; // image not completely centered
+      // background-color: $color-pureblack;
+      display: inline-block;
+      width: 100%;
+      max-width: 800px;
+      // opacity: 0.4;
+      // width: 100%;
+    }
+
+    .home-logo {
+      // background: url('../../app/images/iterum.png');
+      // width: 100%;
+      position: fixed;
+      padding-top: 100px;
+      width: 100%;
+
+      img {
+        width: 200px;
+        position: relative;
+      }
+    }
   }
 
-  .slope-content-hero {
-    background: url('../../app/images/hero.jpg');
-    // height: 100%;
-    height: 600px;
-    width: 400px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: calc(50% + 30px)  0; // image not completely centered
-    background-color: black;
-    display: inline-block;
-    // opacity: 0.4;
-    // width: 100%;
-  }
+}
 
-  .home-logo {
-    // background: url('../../app/images/iterum.png');
-    // width: 100%;
-    padding-top: 100px;
-    img {
-      width: 200px;
+
+  .home-main {
+    #home-main-content {
+      margin-top: 640px;
+    }
+    .home-main-content {
+      // padding-top: 120px;
+
+      a {
+        text-decoration: none;
+        color: $color-teal;
+
+        &:hover {
+          color: $color-purple;
+        }
+      }
+    }
+    .home-main-hero {
+      height: 1240px;
+      overflow:hidden;
+
+      @include _showMediumWidth {
+        height: 940px;
+        padding-top: 200px;
+      }
+    }
+
+    &:before {
+      display: block;
+      content: '';
+      background: url('../../app/images/iterum.png');
+      height: 100vh;
+      position: fixed;
+      width: 100%;
+      opacity: 0.03;
+      margin: 0 auto;
+      top: 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    // this preserves the slope
+    margin-top: -$base*10;
+    padding-top: $base*10;
+
+    color: $color-base; 
+
+    .container {
       position: relative;
+      z-index: 50;
+      padding-top: $base*2;
+      padding-bottom: $base*4;
+      padding-left: $base*3;
+      padding-right: $base*3;
+    }
+
+    .home-statement {
+      margin-top: -$base*3;
+      // padding-top: $base;
+      // padding-bottom: $base;
+      // width: 90%;
+
+      .home-intro {
+        @extend %h1;
+        // text-align: center;
+        padding-top: $base * 3;
+        padding-bottom: $base;
+      }
+      .home-intro-desc {
+        @extend %h3;
+        padding-top: 0; //$base*2;
+        padding-bottom: $base*2;
+      }
+
+      span {
+        color: $dark-gray;
+        // padding-bottom: $base;
+      }
+    }
+      .home-statement-box {
+        // margin: $base*2 0;
+        padding: $base/2 0;
+        font-size: 2.1rem;
+
+        a {
+          line-height: $base*4;
+          text-decoration: none;
+          padding: 4px 12px;
+          background-color: rgba($color-purple, 0.8);
+          color: $white !important;
+          @extend %ease;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgba($color-purple, 1);
+            @extend %ease;
+            cursor: pointer;
+          }
+        }
+      }
+
+    .home-box {
+      @extend %serif;
+      font-weight: 600;
+      line-height: $base*3.9;
+      color: black;
+      font-size: $base*2.4;
+      display: inline-block;
+      float: right;
+      padding: $base*2;
+      /* padding-right: 4rem; */
+      background: #f0f0f0;
+      margin: 0 $base*2;
+      padding: $base*2;
+      margin: 0 $base*4;
+
+      .aerialist {
+        color: $color-teal;
+        font-size: $base*3;
+        line-height: $base*3.9;
+      }
+    }
+
+  }
+
+
+
+
+.home-performance {
+  // padding-top: $base*7;
+}
+
+
+
+.contact-card {
+  padding: $base;
+  background-color: $light-gray;
+  margin-bottom: $base*2;
+
+  @extend %shadow-drop;
+}
+
+.section-week {
+  margin-top: $base*3;
+}
+.section-class {
+  margin-top: $base;
+  display: inline-block;
+  float: left;
+  margin-right: $base*4;
+
+  padding-left: $base;
+  border-left: 1px solid $color-purple;
+  min-width: 240px;
+
+  p {
+    margin: 0;
+  }
+}
+  .section-class-container {
+    margin-left: $base*2;
+  }
+
+.section-title {
+  font-size: 21px;
+  display: inline-block;
+  padding: $base/2 $base;
+  background: rgba($color-purple, 0.8);
+  color: $white;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: $base;
+  margin-right: $base;
+}
+
+  .section-value {
+    font-size: $base*1.4;
+  }
+  .section-link a {
+    font-size: $base*1.4;
+    text-decoration: none;
+    color: $color-teal;
+
+    &:hover {
+      color: $color-purple;
+    }
+  }
+
+.contact-section {
+  margin-bottom: $base;
+}
+  .contact-section-title {
+    font-size: 21px;
+  }
+  .contact-section-value a {
+    font-size: $base*1.4;
+    text-decoration: none;
+    color: $color-teal;
+
+    &:hover {
+      color: $color-purple;
+    }
+  }
+
+
+.button-social {
+  display: inline-block;
+  font-size: $base*1.4;
+  padding: $base/2 $base;
+  // padding-left: 0;
+  margin-right: $base * 2;
+  text-decoration: none;
+  color: $color-pureblack;
+  background-color: $dark-silver;
+  cursor: pointer;
+  line-height: 48px;
+  @extend %ease;
+
+  &:hover {
+    background-color: $color-purple;
+    color: white !important;
+    @extend %ease;
+  }
+
+  &.facebook {
+    &:before {
+      display: inline-block;
+      content: ' ';
+      width: $base*2;
+      height: $base*2;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 7px;
+      margin-right: 9px;
+      background-image: url('../../app/images/facebook.png');
+    }
+
+    &:hover {
+      background-color: #3B5998;
+    }
+  }
+
+  &.instagram {
+    &:before {
+      display: inline-block;
+      content: ' ';
+      width: $base*2;
+      height: $base*2;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 7px;
+      margin-right: 9px;
+      background-image: url('../../app/images/instagram.png');
     }
   }
 }
 
 
-.home-main {
-  &:before {
-    display: block;
-    content: '';
-    background: url('../../app/images/iterum.png');
-    height: 100vh;
-    position: fixed;
-    width: 100%;
-    opacity: 0.03;
-    margin: 0 auto;
-    top: 0%;
-    background-position: center;
+
+
+.gallery {
+  position: relative;
+  left: -1%;
+  width: 102% !important;
+
+  .gallery-image {
+    width: 31.33333%;
+    margin: 0 1%;
+    .fluidbox__thumb {
+      width: 100%;
+    }
+  }
+
+  .gallery_img {
+    // width: 33%;
+    // margin-right: $base/2;
+    height: 200px;
     background-repeat: no-repeat;
+    background-size: cover;
+    display:inline-block;
+    box-sizing: content-box;
+
   }
-
-  // this preserves the slope
-  margin-top: -$base*10;
-  padding-top: $base*10;
-
-  color: $color-base; 
-  @extend %background;
-
-  & > .container {
-    position: relative;
-    z-index: 50;
-    padding-top: $base*2;
-    padding-bottom: $base*4;
-  }
-
-  .home-statement {
-    @extend %h1;
-  }
-
-  .home-content {
-    margin: 0 $base*6;
-    // @include span-four(24, 16, 16, 16);
-  }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// *********************************************************
-// HOME / BLOG LIST
-// 
-// STRUCTURE
-// 
-// posts (list)
-//   post                                      [post.category, post.featured : post--featured] - category is used for sorting later on
-//     post--link                              [post.external]
-
-//       [note: posts should use post-preview-std for standard styles, which is a class within post--container or used as default]
-//       post--container (styles & classes)    [post.preview-css (classes used to style the preview), post.preview-img (background preview image for post)]
-// 
-//         post--info
-//           post--info--date--container
-//             post--info--date                  [post.date]
-//           post--info--title--container        [post.title]
-//             post--info--title                 [post.title]
-//           post--info--summary--container               
-//             post--info--summary               [post.summary]
-
-//           post--taglist
-
-//           post--info--taglist-container
-//             post--info--taglist
-//               tag                             [post.tags]
-//               tag ...    
-// 
-// *********************************************************
-
-//   .postList__container {
-//     @include span-four(24, 24, 21, 18);
-//     padding-top: $base*3.8; //distance from the top of the page
-//     padding-right: $base;
-//     @extend %ease;
-//   }
-
-//     .page__header {
-//       margin-bottom: $base*2;
-
-//       a, a:active, a:hover, a:link {
-//         text-decoration: none; 
-//         color: $light-blue;
-//         border-bottom: 1px solid $light-blue;
-//         @extend %ease;
-//         &:hover {
-//           color: $dark-blue;
-//           border-bottom-color: $dark-blue;
-//           @extend %ease;
-//         }
-//       }
-//     }
-//       .page__intro {
-//         @extend %serif;
-//         font-size: $size-p;
-
-//         .page__introtitle {
-//           font-size: $size-large;
-//           line-height: $base*2.5;
-//           display: inline-block;
-//           padding-bottom: $base*2.45;
-//           @extend %display;
-//           // @include media($break-nav-mobile) {line-height: $base*2.5; padding-top: 12px; display: block;}
-//           // @include media($break-nav-thin) {line-height: $base*2.5; padding-top: 12px; display: block;}
-//         }
-
-//         p {
-//           @extend .margin_bottom;
-//         }
-//         em {
-//           color: $orange;
-//         }
-
-//         @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base;}
-//         @include media($break-nav-thin-atleast) {
-//           @include shift(1); padding-left: $base*2; 
-//           // margin-top: $base*0.25; 
-//           margin-bottom: $base*3;
-//         }
-//       }
-//       .page__title {
-//         text-transform: capitalize;
-//         font-size: $size-slightly-larger;
-//       }
-
-//     .postList__filter {
-//       @include media($break-nav-mobile) { 
-//         text-align: center;
-//       }
-//     }
-//     .postList__filter, .page__title {
-//       // @include span-four(18, 24, 24, 24);
-//       @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base*2; margin-bottom: $base*2;}
-//       @include media($break-nav-thin-atleast) {@include shift(1); padding-left: $base*2; margin-top: $base; margin-bottom: $base*2;}
-//     } 
-
-//     // these actually also affect the iterator items on about.md
-//     // too lazy to break these out
-//     .post {
-//       overflow: hidden;
-//       // each post constitutes a row, of the following # columns, stretching across the entire area
-//       @include span-four(24, 24, 24, 24);
-//       list-style-type: none;
-//       // padding-top: $base*2; padding-bottom: $base*2;
-//       @extend %ease;
-//       @extend %sans-serif;
-
-//       //preview title hover effects
-//       &:hover {
-//         @extend %ease;
-//         $scale: 1.02;
-//         // -ms-transform: scale($scale, $scale); /* IE 9 */
-//         // -webkit-transform: scale($scale, $scale); /* Safari */
-//         // transform: scale($scale, $scale);
-
-//         .post__container {
-//           border-top: 1px dashed $deep-gray;
-//           // background-color: rgba($silversky,0.4); @extend %ease-slow; 
-//           .post__title, .post__summary  {
-//             @extend %ease; 
-//             background-color: $hover_color; 
-//           }
-//         }
-//         &+.post .post__container {
-//           border-top: 1px dashed $deep-gray;
-//         }
-//       }
-
-//       // HIDE ALL WORK
-//       // &.work {
-//       //   display: none;
-//       // }
-
-//     }
-    
-
-//     .post__container {
-//       @extend %style-antialiased;
-//       border-top: 1px dashed $light-gray;
-
-//       // height: 200px;  //every post is a standard 200 
-//       @include media($break-nav-mobile) {padding: 4px $base; }
-//       // @include media($break-nav-thin)   {padding: 4px $base; }
-
-//       // standard format should generally spread across the entire column, but larger leaves a little padding on sides for column-breaking
-//       @include media($break-nav-thin) {@include shift(1); }
-//       @include media($break-nav-wide) {@include shift(1); }
-//       @include media($break-nav-full) {@include shift(1); }
-//       width: 100% !important;
-    
-//     }
-
-//     	// styles for previewing images in the list
-//     	@import "postPreviewImg";
-
-//           .post__info {
-//             // display: block; //the container covers the entire block, but each element should be inline-block for highlighting
-//             // position: relative; bottom: -100px;
-//             margin: $base 0;
-//             padding-left: $base*2;
-
-//           } //end post--info
-
-// 	          .post__category__icon {
-//               border-radius: 50%;
-// 	            width: $icon-filter-size;
-// 	            height: $icon-filter-size;
-//   	          margin-right: 10px; 
-// 	            float: left;
-// 	          }
-
-// 		          .post__category--lab .post__category__icon {
-// 	              background-color: rgba($teal, 0.7);
-// 		          }
-
-// 	            .post__category--idea .post__category__icon {
-// 	              background-color: rgba($dark-orange, 0.7);
-// 	            }
-
-// 	            .post__category--thought .post__category__icon {
-// 	              background-color: rgba($green, 0.7);
-// 	            }
-
-// 	            .post__category--work .post__category__icon {
-// 	                background-color: rgba($purple, 0.7);
-// 	            }
-
-//               .post__category--tumblr .post__category__icon {
-//                   background-color: rgba($blue, 0.7);
-//               }
-
-
-// 	          .post__category__label {
-// 	            color: $dark-gray;
-//               line-height: 1rem;
-//               // margin-bottom: 4px;
-//               font-size: $size-smaller;
-// 	          }
-
-//             .post__date__container {
-//               position: relative; left: -$base; top: -$base*0.5;
-//               .post__date { @extend %sans-serif; font-size: $size-preview-date; color: $medium-gray; padding: 0 $base; display: inline-block; }
-//             }
-
-//             // main title
-//             .post__title__container {
-//               // shift a little bit for a padding for the bg hover 
-//               position: relative; left: -$base;
-//               // padding-top: 10px;
-//               // background-color: rgba(blue, 0.5); 
-
-//               .post__title { 
-//                 @extend %style-post-info-title;
-//                 @extend %ease-slow; // creates that lag effect on hover-out
-//                 // @extend %serif;
-//               }
-//             }
-
-//             .post__summary__container {
-//               position: relative; left: -$base;
-//               color: $gray;
-
-//               .post__summary {
-//                 display: inline-block;
-//                 padding: $base/4 $base;
-//                 line-height: 1.6rem;
-//               }
-//             }
-
-//             .post__tags__container {
-//               font-size: $size-preview-tag; 
-//               display: inline; color: $lighter-gray;
-//               font-weight: 300;
-//               .post__tags {
-//                 margin-left: 0;
-//                 li {
-//                   // @extend %serif; 
-//                   display: inline;
-//                   &:before {content: '#'}
-//                   &:not(:last-child):after{content: ',';}
-
-//                   /* once we have clickable tags
-//                   border: 1px solid $gray;
-//                   background-color: $gray;
-//                   padding-bottom: 0.3em; padding-top: 0.3em;
-//                   padding-left: 0.8em; padding-right: 0.8em;
-//                   @include set-radius(4px); 
-//                   @include font-sans($f3, 300);
-//                   display: inline;
-//                   color: white;
-//                   */
-//                 }
-
-//               }
-//             }
-
-
-
-// //////////////////////////////////////////////// 
-// // 
-// // CUSTOM STYLES for POST PREVIEWS 
-// // 
-// ////////////////////////////////////////////////
-
-
-// .post__imgPreview {
-//   // margin-top: $base;
-//   margin-bottom: 0;
-//   padding-bottom: $base*2;
-
-//   .post__info {
-//     margin-bottom: 0;
-//     padding-top: $base/2;
-//     padding-bottom: $base/2;
-//   }
-// }
-
-
-// /*
-//         // Custom styles for each blog post
-//         .post-preview-break-the-grid {
-//           @include span-four(24, 18, 18, 18); 
-
-//           @include media($break-nav-thin) { padding-left: 11%;  }
-//           @include media($break-nav-wide) { padding-left: 11%;  }
-//           @include media($break-nav-full) { padding-left: 110px;  }
-          
-//           margin: $base 0; margin-bottom: $base*2; 
-//           overflow: hidden; 
-
-//           .post--info {
-            
-//             margin-top: $base !important;
-//             margin-bottom: $base  !important;
-//             @include media($break-nav-thin-atleast) { @include span-columns(18); @include shift(-5); padding-left: 3rem !important; } 
-//           }
-
-//           .post--preview-before, .post--preview-after {
-//             @include media($break-nav-mobile) { display: none; }
-//             display: inline; @extend %ease-slow;
-//             color: transparent; opacity: 0.8;
-//             text-shadow: 0 0 2px $light-gray;
-//           }
-
-//           &:hover { .post--preview-before, .post--preview-after { text-shadow: 0 0 3px $gray; @extend %ease-slow;} }
-//         }
-// */
-//   // end Posts / Preview (index file)
-
-
-
-
 

@@ -72,7 +72,7 @@
 }
 
 %shadow-drop {
-  box-shadow: 0 5px 23px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,1);
 }
 
 %box-shade-light {
@@ -132,13 +132,17 @@
 }
 
 @mixin slope($deg) {
-  // -webkit-transform: rotate($deg);
-  // -moz-transform: rotate($deg);
-  // -o-transform: rotate($deg);
-  // -ms-transform: rotate($deg);
-  // transform: rotate($deg);
   @include transform(rotate($deg));
   transform-origin: left center;
+
+  .slope-content {
+    @include transform(rotate($deg * -1))
+  }
+}
+
+@mixin slopeNeg($deg) {
+  @include transform(rotate($deg));
+  transform-origin: right center;
 
   .slope-content {
     @include transform(rotate($deg * -1))

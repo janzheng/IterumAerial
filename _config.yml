@@ -1,12 +1,9 @@
-title : Jan Zheng Portfolio
-tagline: Jan's Portfolio
+title : Iterum Aerial
+tagline: Iterum Aerial
 author :
   name : Jan Zheng
   email : contact@janzheng.com
   github : janzheng
-  twitter : janistanian
-  linkedin : www.linkedin.com/in/janzh # this probably needs to be configured somewhere
-
 
 markdown: kramdown
 highlighter: rouge
@@ -16,14 +13,6 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "
 kramdown:
   input: GFM
   hard_wrap: false
-
-navigation:
- - text: thoughts
-   url: /
- - text: about
-   url: /about.html
- - text: bookmarks
-   url: /bookmarks.html
 
 sass:
   sass_dir: _sass
