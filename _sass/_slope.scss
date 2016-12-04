@@ -37,6 +37,7 @@ $slope_left: -10%;
       @include _showSmallWidth {
         margin-left: 0;
         margin-right: 0;
+        width: 100%;
       }
     }
     .slope-frame {

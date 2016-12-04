@@ -342,6 +342,11 @@ section {
 ._hidden {
   display: none !important;
 }
+  ._hideMobile {
+    @include _showSmallWidth {
+      display: none !important;
+    }
+  }
 
 ._alignRight {
   text-align: right;
@@ -421,6 +426,14 @@ section {
 
 }
 
+.fluidbox--opened {
+  .fluidbox__ghost {
+    @include _showTinyWidth {
+      // top: -800px !important;
+    }
+  }
+}
+
 
 
 
@@ -428,10 +441,29 @@ section {
 .no-skrollr {
   .intro {
     position: relative !important;
+    padding-bottom: 150px;
+  }
+  #home-hero-image {
+    padding-bottom: 300px;
+  }
+  .home-logo {
+    bottom: -280px;
+  }
+  #home-main-content {
+    margin-top: 0;
+    .slope-negThreeOpposite {
+      height: 680px;
+    }
+  }
+  .home-main {
+    padding-top: 0;
+    top: -120px;
+    position: relative;
   }
 
-
-
 }
+
+
+
 
 
