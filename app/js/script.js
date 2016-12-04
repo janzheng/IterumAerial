@@ -1,7 +1,4 @@
 
-// https://github.com/Prinzhorn/skrollr
-var s = skrollr.init({forceHeight: false});
-
 
 /**
  * jQuery.browser.mobile (http://detectmobilebrowser.com/)
@@ -74,9 +71,12 @@ var s = skrollr.init({forceHeight: false});
 
 
     if(!jQuery.browser.mobile) {
+      // https://github.com/Prinzhorn/skrollr
+      var s = skrollr.init({forceHeight: false});
       video.load(); 
       video.controls = false;
     } else {
+      $('body').addClass('no-skrollr');
       $('video').hide();
     }
 
