@@ -373,11 +373,10 @@
 }
 
 
-.main__footer--contact {
-  @include _showSmallWidth {
-    * {
-      font-size: $base;
-    }
+.main__footer__slope {
+  @include _showMediumWidth {
+    position: relative;
+    bottom: -120px;
   }
 }
 
