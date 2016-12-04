@@ -59,15 +59,19 @@
 
   @include _showMediumWidth {
     // background: $color-bg;
-    position: relative;
-    top: -64px;
+    // position: relative;
+    top: 0;
+    background: black;
+    padding: 21px 0;
+    z-index: 99;
+    opacity: 1 !important;
     a {
       border-bottom-width: 0 !important;
     }
   }
   @include _showSmallWidth {
-    position: relative;
-    top: -70px;
+    // position: relative;
+    // top: 30px;
   }
 
 }

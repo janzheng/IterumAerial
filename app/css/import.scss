@@ -135,6 +135,11 @@ html, body {
       @extend %ease;
       color: $color-purple;
     }
+
+
+    @include _showSmallWidth {
+      font-size: $base;
+    }
   }
   .main__footer__slope {
     .slope-content {
@@ -302,6 +307,11 @@ section {
       }
       @include _showSmallWidth {
         top: 100px;
+        img {
+          top: -200px;
+          left: -100px;
+          width: 140%;
+        }
       }
     }
     #fiji {

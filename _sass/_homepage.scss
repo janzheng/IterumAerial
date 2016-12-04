@@ -10,12 +10,6 @@
   height: 100%;
   @include ease(130ms, height opacity);
 
-  &._fade {
-    opacity: 0;
-    height: 0;
-    @include ease(130ms, height opacity);
-  }
-
   #intro-block {
     display: block;
   }
@@ -361,6 +355,29 @@
     display:inline-block;
     box-sizing: content-box;
 
+  }
+}
+
+
+.intro._fade {
+  opacity: 0;
+  // height: 0;
+  @include ease(130ms, height opacity);
+}
+.no-skrollr {
+  ._fade {
+    // opacity: 1 !important;
+    height: auto !important;
+    // @include ease(130ms, height opacity);
+  }
+}
+
+
+.main__footer--contact {
+  @include _showSmallWidth {
+    * {
+      font-size: $base;
+    }
   }
 }
 
