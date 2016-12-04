@@ -250,6 +250,9 @@ html, body {
 }
 ._marginBottomNegativeLarge {
   margin-bottom: -120px;
+  @include _showMediumWidth {
+    margin-bottom: 0;
+  }
 }
 ._marginLeftRightNone {
   margin-left: 0;
