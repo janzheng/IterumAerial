@@ -8,6 +8,12 @@
 // custom media query and breakpoint that fits the site
 // used as mixins
 
+@mixin _showHugeWidth(){
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
 @mixin _showMediumWidth(){
   @media (max-width: 1000px) {
     @content;
@@ -20,6 +26,11 @@
   }
 }
 
+@mixin _showTinyWidth(){
+  @media (max-width: 479px) {
+    @content;
+  }
+}
 
 // *********************************************************
 // UNIVERSAL
@@ -140,7 +151,7 @@ h1, %h1 {
 
   font-weight: 600;
   font-size: $base*2.2;
-  line-height: $base*5.7;
+  line-height: $base*3.3;
   color: $color-black;
 }
 

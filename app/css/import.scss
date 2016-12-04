@@ -123,9 +123,9 @@ html, body {
   // @extend %background;
   color: $medium-gray;
 }
-  .footer-email {
+  .footer-contact {
     font-weight: 300;
-    font-size: $base * 2;
+    font-size: $base * 1.6;
     letter-spacing: 1.2px;
     text-decoration: none;
     line-height: 64px;
@@ -186,13 +186,21 @@ html, body {
     // }
 
   .section-half {
-    @include span-four(24, 12, 12, 12);
+    @include span-four(24, 24, 12, 12);
 
     &:first-of-type {
       padding-right: $base*2;
     }
     &:last-of-type {
       padding-left: $base*2;
+    }
+
+    @include _showSmallWidth {
+      margin-top: $base*2;
+      &:first-of-type {
+        margin-top: 0;
+      }
+        padding: 0 !important;
     }
   }
   .section-third {
@@ -268,6 +276,37 @@ section {
 ._parallax {
   position: relative;
 }
+  ._parallax-frame {
+    position: relative;
+  }
+    #hangin {
+      @include _showHugeWidth {
+        top: -150px;
+      }
+      @include _showMediumWidth {
+        top: -250px;
+      }
+      @include _showSmallWidth {
+        top: -150px;
+      }
+    }
+    #video {
+      @include _showSmallWidth {
+        max-height: 350px;
+      }
+    }
+    #skyjam {
+      top: 0px;
+      @include _showHugeWidth {
+        top: -100px;
+      }
+      @include _showSmallWidth {
+        top: 100px;
+      }
+    }
+    #fiji {
+      top: 50px;
+    }
 
 
 
@@ -301,7 +340,7 @@ section {
 // }
 
 ._hidden {
-  display: none;
+  display: none !important;
 }
 
 ._alignRight {
@@ -312,6 +351,11 @@ section {
   padding-top: $base * 0.3;
   // text-align: right;
   padding-left: $base * 3;
+
+  @include _showTinyWidth {
+    padding-left: 0;
+    padding-bottom: $base;
+  }
 
   ul {
     li {
@@ -329,9 +373,52 @@ section {
   }
 }
 
+._toggle {
+  text-align: center; 
+  display: block;
+
+  span {
+    background: $color-base-white;
+    padding: $base/2 $base;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    content: ' ';
+    display: block;
+    position: relative;
+    border-bottom: 1px solid $gray;
+    bottom: $base;
+    @extend %ease;
+  }
+  // padding: $base/2 $base;
+  // color: $white !important;
+  // background-color: rgba($color-purple, 0.8);
+
+  &:hover {
+    // background-color: rgba($color-purple, 1);
+    &:after {
+      border-bottom: 1px solid $color-purple;
+      @extend %ease;
+    }
+  }
+}
 
 
 
+.fluidbox__wrap {
+  @extend %ease;
+  img {
+    @extend %ease;
+  }
 
+  &:hover img {
+    filter: grayscale(100%);
+    opacity: 0.8 !important;
+    @extend %ease;
+  }
+
+}
 
 

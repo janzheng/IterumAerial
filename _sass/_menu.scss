@@ -14,9 +14,6 @@
   z-index: $z-top + 1;
   @extend %ease-fast;
 
-  @include _showSmallWidth {
-    top: -85px;
-  }
 
   .menu--right {
     float: right;
@@ -45,7 +42,7 @@
 
     @include _showSmallWidth {
       display: block;
-      max-width: 170px;
+      max-width: 140px;
       margin: 0 auto !important; // $base*2;
       // margin-right: 20px;
       padding-bottom: 3px;
@@ -64,5 +61,13 @@
     // background: $color-bg;
     position: relative;
     top: -64px;
+    a {
+      border-bottom-width: 0 !important;
+    }
   }
+  @include _showSmallWidth {
+    position: relative;
+    top: -70px;
+  }
+
 }

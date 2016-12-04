@@ -32,6 +32,12 @@ $slope_left: -10%;
       padding-bottom: 100px;
       margin-left: $base * 5;
       margin-right: $base * 5;
+
+
+      @include _showSmallWidth {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
     .slope-frame {
       margin-top: -100px;

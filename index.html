@@ -46,7 +46,7 @@ menu: full
                   bottom: 140px"
                 data-900="
                   opacity: 1;
-                  bottom: -50px"
+                  bottom: -55px"
                 data-1100="
                   bottom: -63px"
             >
@@ -56,7 +56,7 @@ menu: full
                 data-800="
                   width: 300px" 
                 data-950="
-                  width: 88px" 
+                  width: 80px" 
                 data-1100="
                   width: 67px"
               />
@@ -100,14 +100,16 @@ menu: full
             border-width: 21px;" >
           <div class="slope-content slope-frame _noPadding-bottom">
             <div class="home-main-hero _parallax">
-              <img 
-                class="_parallax"
-                width="100%" src="app/images/hangin.jpg"
-                data-0="
-                  top: 500px;" 
-                data-top-bottom="
-                  top: -250px" 
-              />
+              <div class="_parallax-frame" id="hangin">
+                <img 
+                  class="_parallax"
+                  width="100%" src="app/images/hangin.jpg"
+                  data-0="
+                    top: 500px;" 
+                  data-top-bottom="
+                    top: -250px" 
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -146,11 +148,11 @@ menu: full
     -->
 
     <section class="slope-frame-container _noMargin">
-      <div class="slope-negSixOpposite">
+      <div class="slope-negSixOpposite" id="video">
         <div class="slope-content slope-frame"
           data-0="
             height: 700px;
-            top: -500px;
+            top: -300px;
           " 
           data-top-bottom="
             height: 700px;
@@ -190,7 +192,7 @@ menu: full
                       She has choreographed and performed ambient and original pieces, and delights in costuming and performing character work, including faeries, princesses, mermaids, and pixies.
                     </p>
                     <p>
-                      <a class="_toggle" href="#" data-src="perf-bio">Continue reading about Shannon</a>
+                      <a class="_toggle" href="#" data-src="perf-bio"><span>Learn more</span></a>
                     </p>
                     <div class="perf-bio _hidden">
                       <p>
@@ -305,16 +307,18 @@ menu: full
     <section class="slope-frame-container _noMargin">
       <div class="slope-negSixOpposite">
         <div class="slope-content slope-frame"
-          data-0="
-            height: 700px;
-            top: -700px;
-          " 
-          data-top-bottom="
-            height: 700px;
-            top: 200px;
-          "
+              style="height:500px"
         >
-          <img width="100%" style="top: -100px; position: relative;" src="app/images/skyjam.jpg" />
+          <div class="_parallax-frame" id="skyjam">
+            <img width="100%" 
+              style="top: -100px; position: relative;" src="app/images/skyjam.jpg" 
+              data-500-bottom-top=" 
+                top: -300px;
+              " 
+              data--300-top-bottom="
+                top: 300px;
+              "/>
+          </div>
         </div>
       </div>
     </section>
@@ -347,7 +351,7 @@ menu: full
                     </p>
                     
                     <p>
-                      <a class="_toggle" href="#" data-src="perf-teach">Learn more about Shannon’s background</a>
+                      <a class="_toggle" href="#" data-src="perf-teach"><span>Learn more</span></a>
                     </p>
                     <div class="perf-teach _hidden">
                       <p>
@@ -404,16 +408,17 @@ menu: full
     <section class="slope-frame-container _noMargin">
       <div class="slope-negSixOpposite">
         <div class="slope-content slope-frame"
-          data-0="
-            height: 600px;
-            top: -1200px;
-          " 
-          data-top-bottom="
-            height: 600px;
-            top: 100px;
-          "
+              style="height: 600px"
         >
-          <img width="100%" src="app/images/fiji.jpg" />
+          <div class="_parallax-frame" id="fiji">
+            <img width="100%" src="app/images/fiji.jpg"
+                  style="position: relative"
+                  data-800-bottom-top=" 
+                    top: -100px;
+                  " 
+                  data-0-top-bottom="
+                    top: 300px;" />
+          </div>
         </div>
 
       </div>
@@ -689,12 +694,12 @@ menu: full
       <div class="slope-container">
         <div class="slope-negThreeInverse">
           <div class="slope-content _content">
-            <div class="main__footer--email">
+            <div class="main__footer--contact">
               <div>
-                <a class="footer-email" href="tel>:678-701-7584">(678) 701-7584</a>
+                <a class="footer-contact" href="tel>:678-701-7584">(678) 701-7584</a>
               </div>
               <div>
-                <a class="footer-email" href="mailto:shannon@iterumaerial.com">shannon@iterumaerial.com</a>
+                <a class="footer-contact" href="mailto:shannon@iterumaerial.com">shannon@iterumaerial.com</a>
               </div>
             </div>
           </div>
