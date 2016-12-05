@@ -5,7 +5,7 @@
 
 
 .menu {
-  @include slope(-0.7deg);
+  // @include slope(-0.7deg);
   opacity: 0;
 
   position: fixed;
@@ -14,6 +14,10 @@
   z-index: $z-top + 1;
   @extend %ease-fast;
 
+
+  @include _showSmallWidth {
+    top: 20px;
+  }
 
   .menu--right {
     float: right;
@@ -57,6 +61,15 @@
     }
   }
 
+  @include _showSmallWidth {
+    // position: relative;
+    // top: 30px;
+  }
+
+}
+
+.no-skrollr {
+
   @include _showMediumWidth {
     // background: $color-bg;
     // position: relative;
@@ -72,9 +85,4 @@
       border-bottom-width: 0 !important;
     }
   }
-  @include _showSmallWidth {
-    // position: relative;
-    // top: 30px;
-  }
-
 }

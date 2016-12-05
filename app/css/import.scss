@@ -142,6 +142,7 @@ html, body {
     }
   }
   .main__footer__slope {
+    background-color: $color-base-white;
     .slope-content {
       padding-top: $base*2;
       padding-bottom: $base;
@@ -249,11 +250,15 @@ html, body {
   padding-bottom: 140px;
 }
 ._marginBottomNegativeLarge {
-  margin-bottom: -120px;
-  @include _showMediumWidth {
-    margin-bottom: 0;
-  }
+  margin-bottom: -140px;
 }
+  .no-skrollr {
+    ._marginBottomNegativeLarge {
+      @include _showSmallWidth {
+        margin-bottom: 0;
+      }
+    }
+  }
 ._marginLeftRightNone {
   margin-left: 0;
   margin-right: 0;
@@ -304,21 +309,27 @@ section {
       }
     }
     #skyjam {
-      top: 0px;
+      top: -340px;
       @include _showHugeWidth {
-        top: -100px;
+        top: -500px;
+      }
+      @include _showMediumWidth {
+        top: -200px;
       }
       @include _showSmallWidth {
-        top: 100px;
+        top: -250px;
         img {
-          top: -200px;
+          // top: -200px;
           left: -100px;
           width: 140%;
         }
       }
     }
     #fiji {
-      top: 50px;
+      top: -250px;
+      @include _showSmallWidth {
+        top: -250px;
+      }
     }
 
 
@@ -355,10 +366,13 @@ section {
 ._hidden {
   display: none !important;
 }
-  ._hideMobile {
-    @include _showSmallWidth {
-      display: none !important;
+  .no-skrollr {
+    ._hideMobile {
+      @include _showSmallWidth {
+        display: none !important;
+      }
     }
+
   }
 
 ._alignRight {
