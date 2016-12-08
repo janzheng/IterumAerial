@@ -380,3 +380,33 @@
   }
 }
 
+
+
+
+.home-event {
+  padding: $base $base*2;
+  overflow: hidden;
+
+  & {
+    background-color: $dark-silver;
+  }
+
+  h2, h3, h4 {
+    padding: 0;
+    background-color: $dark-silver;
+  }
+
+  .home-event-date {
+    font-weight: 600;
+    padding-bottom: $base/2;
+  }
+  img {
+    width: 100%; 
+  }
+}
+
+
+
+
+
+
