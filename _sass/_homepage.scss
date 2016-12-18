@@ -204,6 +204,13 @@
   padding-bottom: $base*4;
   margin-left: 5rem;
   margin-right: 5rem;
+
+
+  @include _showSmallWidth {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   background: $silver;
 }
 
