@@ -72,6 +72,15 @@
 }
 
 
+  .container {
+    position: relative;
+    z-index: 50;
+    padding-top: $base*2;
+    padding-bottom: $base*4;
+    padding-left: $base*3;
+    padding-right: $base*3;
+  }
+
   .home-main {
     #home-main-content {
       margin-top: 640px;
@@ -117,15 +126,6 @@
     padding-top: $base*10;
 
     color: $color-base; 
-
-    .container {
-      position: relative;
-      z-index: 50;
-      padding-top: $base*2;
-      padding-bottom: $base*4;
-      padding-left: $base*3;
-      padding-right: $base*3;
-    }
 
     .home-statement {
       margin-top: -$base*3;
@@ -400,6 +400,7 @@
 
   & {
     background-color: $dark-silver;
+    margin-bottom: $base*3;
   }
 
   h2, h3, h4 {
@@ -414,6 +415,7 @@
   img {
     width: 100%; 
   }
+
 }
 
 
